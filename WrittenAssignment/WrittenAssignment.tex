@@ -1,0 +1,33 @@
+\immediate\write18{texcount.pl \jobname.tex -out=\jobname.sum -1 -sum=1}
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage[australian]{babel}
+\usepackage[doublespacing]{setspace}
+\usepackage{todonotes}
+\usepackage[title,titletoc]{appendix}
+\usepackage{booktabs}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{pdfpages} 
+\pdfminorversion=6
+\usepackage{natbib}
+\bibliographystyle{customharvard} \bibpunct{(}{)}{;}{a}{}{} \setlength{\bibhang}{0pt}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\author{name}
+\title{title }
+\date{April 22, 2012}
+
+\pagestyle{fancyplain} 
+\setlength{\headheight}{15.2pt}
+\lhead{\fancyplain{}{\thepage}}
+\rhead{\fancyplain{}{\textit{\leftmark}}}
+\lfoot{} \chead{} \cfoot{}  \rfoot{}
+ \setcounter{secnumdepth}{0}
+\begin{document}
+\include{titlepage}
+\tableofcontents
+\pagebreak
+\section{Introduction}
+stuff
+\end{document}
