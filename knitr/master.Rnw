@@ -1,0 +1,7 @@
+\documentclass{article}
+
+\begin{document}
+
+\Sexpr{knit_child('child-full.Rnw')}
+
+\end{document}
