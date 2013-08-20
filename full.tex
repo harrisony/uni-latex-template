@@ -17,6 +17,7 @@
 \usepackage{hhline} %horizontal lines
 \usepackage{framed} %framed or highlighted regions
 \usepackage{permute}
+\usepackage{embedfile} \embedfile{\jobname.tex}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \renewcommand{\labelitemi}{---}
 \usepackage{etoolbox} % if and then
@@ -57,7 +58,7 @@
   \end{tabular}%
 }
 
-%Fix spacing http://tex.stackexchange.com/a/22130
+%Fix spacing of theorems http://tex.stackexchange.com/a/22130
 \makeatletter
 \def\thm@space@setup{%
   \thm@preskip=\parskip \thm@postskip=0pt
