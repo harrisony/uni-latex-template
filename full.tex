@@ -49,6 +49,14 @@
 \newcommand*{\diagram}[2][0.7]{\begin{figure}[H]\centering\includegraphics[scale=#1]{Diagrams/#2.pdf}\end{figure}}
 \newcommand*{\fliptable}{ $( $\raisebox{0.75em}{\oval(10,10)[r b] }$\;   ^{\circ} \square ^{\circ} ) $\raisebox{0.75em}{\oval(10,10)[r b] }$ \; \smallfrown$ \raisebox{0.25em}{$\bot$}{\bf --}\raisebox{0.25em}{$\bot$}}
 
+
+% http://tex.stackexchange.com/a/96412
+\newcommand{\logicarg}[2]{% \logicarg{<premise>}{<conclusion>}
+  \begin{tabular}[t]{@{}l@{}}
+    #1 \\ \hline #2
+  \end{tabular}%
+}
+
 %Fix spacing http://tex.stackexchange.com/a/22130
 \makeatletter
 \def\thm@space@setup{%
