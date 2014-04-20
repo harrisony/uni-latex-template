@@ -1,7 +1,6 @@
 \RequirePackage[l2tabu,orthodox]{nag} % kick old habits
 \PassOptionsToPackage{table}{xcolor}
-\documentclass[12pt]{report}
-\usepackage[a4paper]{geometry} % works with page dimeensons
+\documentclass[12pt,a4paper]{memoir}
 \usepackage{subfiles} %handles multiple files
 \usepackage{graphicx} %importing of images
 \usepackage{amsmath} %math enhancements
@@ -23,11 +22,11 @@
 \renewcommand{\labelitemi}{---}
 \usepackage{etoolbox} % if and then
 \usepackage{multirow} % extension to tabular
+\usepackage{multicol} % allow mutiple columns
 \usepackage{stmaryrd} %St Mary’s Road symbol font
 \usepackage{dsfont} % doublestroke
-\usepackage[parfill]{parskip} % blank paragraph 
-\usepackage{enumitem} % list fun
-\usepackage{xcolor} % colours
+\usepackage{enumitem} % customising lists
+\usepackage[table]{xcolor} % colours
 \usepackage{tikz} %vector drawing
 \usepackage{tabularx} %stretched table columns
 \usepackage{pgfplots} % plotting of functions
@@ -64,6 +63,11 @@
   \thm@preskip=\parskip \thm@postskip=0pt
 }
 \makeatother
+
+\addtopsmarks{headings}{}{
+\createmark{chapter}{both}{nonumber}{}{}
+}
+\pagestyle{headings}
 
 
 %redefining the chapter heading
