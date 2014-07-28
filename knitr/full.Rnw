@@ -83,6 +83,6 @@
 \begin{document}
 	\maketitle
 	\setcounter{singlefile}{0}
-        \Sexpr{knit_child('lecture1-embed.Rnw')} \embedfile{lecture1-embed.Rnw}
+        \Sexpr{knit_child('lectureN-embed.Rnw')} \embedfile{lectureN-embed.Rnw}
 
 \end{document}

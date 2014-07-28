@@ -1,0 +1,8 @@
+\embedfile{lectureN-content.Rnw}
+\Sexpr{set_parent('full.Rnw')}
+\title{MATH1005 --- Lecture N}
+\date{28th July 2014}
+\maketitle
+
+\Sexpr{knit_child('lectureN-content.Rnw')}
+\end{document}
