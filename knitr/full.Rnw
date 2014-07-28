@@ -1,0 +1,87 @@
+\RequirePackage[l2tabu,orthodox]{nag} % kick old habits
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry} % works with page dimeensons
+\usepackage{subfiles} %handles multiple files
+\usepackage{graphicx} %importing of images
+\usepackage{amsmath} %math enhancements
+\usepackage{amssymb} %maths symbols
+\usepackage{amsthm} %enhancement of theorem
+\usepackage{minted} %syntax highlighting
+\usepackage{algorithmicx} % ALGORITHMS
+\usepackage{algorithm}
+\usepackage{subfig} % mini figures
+\usepackage{float} %enhanced figures and tables
+\usepackage{xspace} %fancy handling of spaces with macros
+\usepackage{booktabs} %enhanced tables
+\usepackage{siunitx} % deals with units
+\usepackage{hhline} %horizontal lines
+\usepackage{framed} %framed or highlighted regions
+\usepackage{permute}
+\usepackage{embedfile} \embedfile{\jobname.tex}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\labelitemi}{---}
+\usepackage{etoolbox} % if and then
+\usepackage{multirow} % extension to tabular
+\usepackage{stmaryrd} %St Mary’s Road symbol font
+\usepackage{dsfont} % doublestroke
+\usepackage[parfill]{parskip} % blank paragraph 
+\usepackage{enumitem} % list fun
+\usepackage{xcolor} % colours
+\usepackage{tikz} %vector drawing
+\usepackage{tabularx} %stretched table columns
+\usepackage{pgfplots} % plotting of functions
+\pgfplotsset{compat=1.10}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{microtype} % little pdf tweaks
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{ex}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+%\newcommand*{\N}{\ensuremath{\mathbb{N}}}
+%\DeclareMathOperator{\cis}{cis}
+\newcommand*{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand*{\diagram}[2][0.7]{\begin{figure}[H]\centering\includegraphics[scale=#1]{Diagrams/#2.pdf}\end{figure}}
+\newcommand*{\fliptable}{ $( $\raisebox{0.75em}{\oval(10,10)[r b] }$\;   ^{\circ} \square ^{\circ} ) $\raisebox{0.75em}{\oval(10,10)[r b] }$ \; \smallfrown$ \raisebox{0.25em}{$\bot$}{\bf --}\raisebox{0.25em}{$\bot$}}
+
+
+% http://tex.stackexchange.com/a/96412
+\newcommand{\logicarg}[2]{% \logicarg{<premise>}{<conclusion>}
+  \begin{tabular}[t]{@{}l@{}}
+    #1 \\ \hline #2
+  \end{tabular}%
+}
+
+%Fix spacing of theorems http://tex.stackexchange.com/a/22130
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=\parskip \thm@postskip=0pt
+}
+\makeatother
+
+
+%redefining the chapter heading
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+\vspace*{50 pt}%
+{\setlength{\parindent}{0pt} \raggedright \normalfont
+\bfseries\Huge#1
+\par\nobreak\vspace{40 pt}}}
+\makeatother
+
+\newcounter{singlefile}
+\setcounter{singlefile}{1}
+
+\title{MATH1005 --- Statistics}
+\author{Harrison Conlin}
+\begin{document}
+	\maketitle
+	\setcounter{singlefile}{0}
+        \Sexpr{knit_child('lecture1-embed.Rnw')}
+\end{document}

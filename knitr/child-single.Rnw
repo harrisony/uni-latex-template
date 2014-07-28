@@ -1,9 +1,0 @@
-\documentclass{article}
-
-\begin{document}
-
-\section{Lecture 1}
-\Sexpr{knit_child('child-content.Rnw')}
-
-
-\end{document}
