@@ -1,2 +1,3 @@
+\embedfile{lecture1-content.Rnw}
 \chapter{Lecture 1}
 \Sexpr{knit_child('lecture1-content.Rnw')}

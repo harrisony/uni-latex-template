@@ -18,7 +18,7 @@
 \usepackage{hhline} %horizontal lines
 \usepackage{framed} %framed or highlighted regions
 \usepackage{permute}
-\usepackage{embedfile} \embedfile{\jobname.tex}
+\usepackage{embedfile} \embedfile{\jobname.Rnw}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \renewcommand{\labelitemi}{---}
 \usepackage{etoolbox} % if and then
@@ -83,5 +83,6 @@
 \begin{document}
 	\maketitle
 	\setcounter{singlefile}{0}
-        \Sexpr{knit_child('lecture1-embed.Rnw')}
+        \Sexpr{knit_child('lecture1-embed.Rnw')} \embedfile{lecture1-embed.Rnw}
+
 \end{document}
