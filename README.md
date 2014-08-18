@@ -3,4 +3,5 @@ uni-latex-template
 
 Template I use for uni stuff
 
-> latexmk -pvc -pdf  -pdflatex="pdflatex --shell-escape %O %S"
+### build-hatt-template.py
+Builds a truthtable using https://github.com/beastaugh/hatt
