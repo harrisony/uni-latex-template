@@ -22,7 +22,9 @@ for k, v in REPLACEMENTS.items():
 
 propositions = ['$' + x[0].strip() + '$' for x in header_cols]
 
-print(str.format("\\begin{{tabular}}[|{0}|c|]", len(propositions) * 'c'))
+print(str.format("\\begin{{tabular}}{{|{0}|c|}}", len(propositions) * 'c'))
+
+print(r"\hline")
 
 print(' & '.join(propositions), '& $', expression, r'$ \\')
 
