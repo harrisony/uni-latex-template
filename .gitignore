@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/47b1ace3d0b71722ea93be14f42846ab3329f161/TeX.gitignore
+### https://raw.github.com/github/gitignore/8559c8a381a26e596fc3cf76eeb99df2a62eebf8/TeX.gitignore
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -11,6 +11,7 @@
 
 ## Intermediate documents:
 *.dvi
+*-converted-to.*
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
@@ -22,10 +23,12 @@
 *.blg
 *-blx.aux
 *-blx.bib
+*.brf
 *.run.xml
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
+*.synctex
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
@@ -35,6 +38,9 @@
 # algorithms
 *.alg
 *.loa
+
+# achemso
+acs-*.bib
 
 # amsthm
 *.thm
@@ -52,6 +58,12 @@
 *.[1-9]R
 *.[1-9][0-9]R
 *.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
 
 # glossaries
 *.acn
@@ -60,8 +72,16 @@
 *.glo
 *.gls
 
+# gnuplottex
+*-gnuplottex-*
+
 # hyperref
 *.brf
+
+# knitr
+*-concordance.tex
+*.tikz
+*-tikzDictionary
 
 # listings
 *.lol
@@ -78,7 +98,11 @@
 *.mtc0
 
 # minted
+_minted*
 *.pyg
+
+# morewrites
+*.mw
 
 # nomencl
 *.nlo
@@ -99,8 +123,12 @@ sympy-plots-for-*.tex/
 # xindy
 *.xdy
 
+# WinEdt
+*.bak
+*.sav
 
-### https://raw.github.com/github/gitignore/47b1ace3d0b71722ea93be14f42846ab3329f161/Global/Vim.gitignore
+
+### https://raw.github.com/github/gitignore/8559c8a381a26e596fc3cf76eeb99df2a62eebf8/Global/Vim.gitignore
 
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
@@ -108,3 +136,5 @@ sympy-plots-for-*.tex/
 Session.vim
 .netrwhist
 *~
+
+
