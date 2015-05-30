@@ -17,3 +17,6 @@ Individual lectures are put in individual files and can be turned into a pdf wit
 Builds a truth table using [beastaugh/hatt](https://github.com/beastaugh/hatt)
 
 TODO: Update script to use [adamchalmers/caroll](https://github.com/adamchalmers/carroll)
+
+### gitattributes
+Uses [tokuhirom/git-xlsx-textconv](https://github.com/tokuhirom/git-xlsx-textconv)
