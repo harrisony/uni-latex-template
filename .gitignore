@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/8559c8a381a26e596fc3cf76eeb99df2a62eebf8/TeX.gitignore
+### https://raw.github.com/github/gitignore/ef8772f1346e95272f6ee2fa76ce502c88444a7b/TeX.gitignore
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -8,6 +8,10 @@
 *.fls
 *.out
 *.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
 
 ## Intermediate documents:
 *.dvi
@@ -16,6 +20,9 @@
 # *.ps
 # *.eps
 # *.pdf
+
+## Generated if empty string is given at "Please type another file name for output:"
+.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -29,12 +36,12 @@
 ## Build tool auxiliary files:
 *.fdb_latexmk
 *.synctex
+*.synctex(busy)
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
 
 ## Auxiliary and intermediate files from other packages:
-
 # algorithms
 *.alg
 *.loa
@@ -50,8 +57,15 @@ acs-*.bib
 *.snm
 *.vrb
 
-#(e)ledmac/(e)ledpar
+# cprotect
+*.cpt
+
+# fixme
+*.lox
+
+#(r)(e)ledmac/(r)(e)ledpar
 *.end
+*.?end
 *.[1-9]
 *.[1-9][0-9]
 *.[1-9][0-9][0-9]
@@ -71,15 +85,21 @@ acs-*.bib
 *.glg
 *.glo
 *.gls
+*.glsdefs
 
 # gnuplottex
 *-gnuplottex-*
+
+# gregoriotex
+*.gaux
+*.gtex
 
 # hyperref
 *.brf
 
 # knitr
 *-concordance.tex
+# TODO Comment the next line if you want to keep your tikz graphics files
 *.tikz
 *-tikzDictionary
 
@@ -94,8 +114,11 @@ acs-*.bib
 
 # minitoc
 *.maf
+*.mlf
+*.mlt
 *.mtc
-*.mtc0
+*.mtc[0-9]
+*.mtc[1-9][0-9]
 
 # minted
 _minted*
@@ -103,6 +126,9 @@ _minted*
 
 # morewrites
 *.mw
+
+# mylatexformat
+*.fmt
 
 # nomencl
 *.nlo
@@ -112,29 +138,75 @@ _minted*
 *.sagetex.py
 *.sagetex.scmd
 
+# scrwfile
+*.wrt
+
 # sympy
 *.sout
 *.sympy
 sympy-plots-for-*.tex/
 
+# pdfcomment
+*.upa
+*.upb
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# thmtools
+*.loe
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
 # todonotes
 *.tdo
+
+# easy-todo
+*.lod
 
 # xindy
 *.xdy
 
+# xypic precompiled matrices
+*.xyc
+
+# endfloat
+*.ttt
+*.fff
+
+# Latexian
+TSWLatexianTemp*
+
+## Editors:
 # WinEdt
 *.bak
 *.sav
 
+# Texpad
+.texpadtmp
 
-### https://raw.github.com/github/gitignore/8559c8a381a26e596fc3cf76eeb99df2a62eebf8/Global/Vim.gitignore
+# Kile
+*.backup
 
+# KBibTeX
+*~[0-9]*
+
+
+### https://raw.github.com/github/gitignore/ef8772f1346e95272f6ee2fa76ce502c88444a7b/Global/Vim.gitignore
+
+# swap
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
-*.un~
+# session
 Session.vim
+# temporary
 .netrwhist
 *~
+# auto-generated tag files
+tags
 
 
