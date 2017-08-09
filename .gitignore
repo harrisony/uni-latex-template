@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/ef8772f1346e95272f6ee2fa76ce502c88444a7b/TeX.gitignore
+### https://raw.github.com/github/gitignore/af988f5c1ed081c88e1d4d33945bb2f14d9a9d4e/Tex.gitignore
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -30,7 +30,6 @@
 *.blg
 *-blx.aux
 *-blx.bib
-*.brf
 *.run.xml
 
 ## Build tool auxiliary files:
@@ -54,14 +53,31 @@ acs-*.bib
 
 # beamer
 *.nav
+*.pre
 *.snm
 *.vrb
+
+# changes
+*.soc
 
 # cprotect
 *.cpt
 
+# elsarticle (documentclass of Elsevier journals)
+*.spl
+
+# endnotes
+*.ent
+
 # fixme
 *.lox
+
+# feynmf/feynmp
+*.mf
+*.mp
+*.t[1-9]
+*.t[1-9][0-9]
+*.tfm
 
 #(r)(e)ledmac/(r)(e)ledpar
 *.end
@@ -116,9 +132,10 @@ acs-*.bib
 *.maf
 *.mlf
 *.mlt
-*.mtc
-*.mtc[0-9]
-*.mtc[1-9][0-9]
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
 
 # minted
 _minted*
@@ -127,11 +144,14 @@ _minted*
 # morewrites
 *.mw
 
-# mylatexformat
-*.fmt
-
 # nomencl
 *.nlo
+
+# pax
+*.pax
+
+# pdfpcnotes
+*.pdfpc
 
 # sagetex
 *.sagetex.sage
@@ -195,18 +215,28 @@ TSWLatexianTemp*
 # KBibTeX
 *~[0-9]*
 
+# auto folder when using emacs and auctex
+/auto/*
 
-### https://raw.github.com/github/gitignore/ef8772f1346e95272f6ee2fa76ce502c88444a7b/Global/Vim.gitignore
+# expex forward references with \gathertags
+*-tags.tex
 
-# swap
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-# session
+
+### https://raw.github.com/github/gitignore/af988f5c1ed081c88e1d4d33945bb2f14d9a9d4e/Global/Vim.gitignore
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
 Session.vim
-# temporary
+
+# Temporary
 .netrwhist
 *~
-# auto-generated tag files
+# Auto-generated tag files
 tags
 
 
